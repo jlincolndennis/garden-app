@@ -24,7 +24,8 @@ exports.up = function(knex, Promise) {
       table.string('name');
       table.string('type');
       table.integer('pot_no');
-      table.integer('yield');
+      table.integer('yield')
+        .defaultTo(0);
       table.integer('garden_id')
         .references('gardens.id')
         .onDelete('CASCADE')
