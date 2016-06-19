@@ -28,7 +28,7 @@
         .state('landing', {
           url: '/',
           parent: 'app',
-          templateUrl: '/app/templates/landing.html'
+          template: '<gr-account></gr-account>'
         })
         .state('user', {
           url: '/user',
