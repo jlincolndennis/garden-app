@@ -28,7 +28,7 @@
         .state('landing', {
           url: '/',
           parent: 'app',
-          template: '<h1>Hello from landing state!</h1>'
+          templateUrl: '/app/templates/landing.html'
         })
         .state('user', {
           url: '/user',
