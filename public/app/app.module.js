@@ -33,7 +33,7 @@
         .state('dash', {
           url: '/dashboard',
           parent: 'app',
-          template: '<h1>Welcome To The Dashboard</h1>'
+          template: '<gr-dash></gr-dash>'
         })
         .state('user', {
           url: '/user',
