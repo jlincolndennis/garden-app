@@ -29,6 +29,10 @@
         return $http.post(url, newUser)
           .then(function (res) {
             console.log(res);
+            if(res.data.token !== undefined){
+              $window.localStorage.setItem('token', res.data.token)
+              $state.go('create')
+            }
           })
     }
   }

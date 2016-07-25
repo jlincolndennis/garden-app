@@ -14,10 +14,18 @@
       }
     }
 
-    // createController.$inject = ['gardenService']
+    createController.$inject = ['gardenService']
 
-    function createController() {
+    function createController(gardenService) {
       var vm = this;
+      vm.newGarden = {};
+      vm.createGarden = createGarden;
+
+      function createGarden(form) {
+        var newGarden = angular.copy(vm.newGarden)
+        console.log(newGarden);
+
+      }
 
     }
 }());

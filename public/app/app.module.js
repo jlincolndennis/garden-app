@@ -43,7 +43,7 @@
         .state('create', {
           url: '/create',
           parent: 'app',
-          templateUrl: '/app/templates/create.html'
+          template: '<gr-create></gr-create>'
         })
 
     }

@@ -1,1 +1,6 @@
 <h1>Create a new Garden</h1>
+<form name="gardenForm" ng-submit="vm.createGarden(gardenForm)" novalidate>
+<label for="">Give Your Garden a Name</label>
+<input type="text" ng-model='vm.newGarden.gardenName'>
+<button type="submit" name="button">Submit</button>
+</form>
