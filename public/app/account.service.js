@@ -4,9 +4,9 @@
   angular.module('app')
     .factory('accountService', accountFactory);
 
-    accountFactory.$inject = ['$http'];
+    accountFactory.$inject = ['$http', '$state', '$window'];
 
-    function accountFactory($http) {
+    function accountFactory($http, $state, $window) {
       return {
         signIn: signIn,
         signUp: signUp
@@ -17,6 +17,10 @@
         return $http.post(url, user)
           .then(function (res) {
             console.log(res);
+            if(res.data.token !== undefined){
+              $window.localStorage.setItem('token', res.data.token)
+              $state.go('dash')
+            }
           })
       }
 
