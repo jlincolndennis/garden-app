@@ -19,7 +19,7 @@
             console.log(res);
             if(res.data.token !== undefined){
               $window.localStorage.setItem('token', res.data.token)
-              $state.go('dash')
+              $state.go('garden')
             }
           })
       }

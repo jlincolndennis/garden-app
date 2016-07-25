@@ -14,6 +14,8 @@ exports.up = function(knex, Promise) {
         .references('users.id')
         .onDelete('CASCADE')
         .onUpdate('CASCADE');
+      table.boolean('active')
+        .defaultTo(true)
       table.timestamp('created_at')
         .notNullable()
         .defaultTo(knex.raw('now()'));

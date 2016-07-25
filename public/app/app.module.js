@@ -30,11 +30,6 @@
           parent: 'app',
           template: '<gr-account></gr-account>'
         })
-        .state('dash', {
-          url: '/dashboard',
-          parent: 'app',
-          template: '<gr-dash></gr-dash>'
-        })
         .state('user', {
           url: '/user',
           parent: 'app',
@@ -43,12 +38,12 @@
         .state('garden', {
           url: '/garden',
           parent: 'app',
-          template: '<h1>Hello from garden state!</h1>'
+          template: '<gr-garden></gr-garden>'
         })
         .state('create', {
           url: '/create',
           parent: 'app',
-          template: '<h1>Hello from create state!</h1>'
+          templateUrl: '/app/templates/create.html'
         })
 
     }
